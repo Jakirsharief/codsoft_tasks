@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Application</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="container ">
+
+        <header>
+            <div>
+                <h1>📝 My To-Do List</h1>
+                <p>Organize your daily tasks</p>
+            </div>
+
+            <button id="darkModeBtn">🌙</button>
+        </header>
+
+        <!-- Add Task -->
+        <section class="task-form">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a new task..."
+            >
+
+            <select id="category">
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+                <option value="Study">Study</option>
+                <option value="Shopping">Shopping</option>
+            </select>
+
+            <select id="priority">
+                <option value="Low">Low Priority</option>
+                <option value="Medium">Medium Priority</option>
+                <option value="High">High Priority</option>
+            </select>
+
+            <input type="date" id="dueDate">
+
+            <button id="addTaskBtn">Add Task</button>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats">
+            <div class="stat-box">
+                <h3 id="totalTasks">0</h3>
+                <p>Total</p>
+            </div>
+
+            <div class="stat-box">
+                <h3 id="completedTasks">0</h3>
+                <p>Completed</p>
+            </div>
+
+            <div class="stat-box">
+                <h3 id="pendingTasks">0</h3>
+                <p>Pending</p>
+            </div>
+        </section>
+
+        <!-- Search & Filter -->
+        <section class="controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search tasks..."
+            >
+
+            <select id="filter">
+                <option value="all">All Tasks</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+            </select>
+
+        </section>
+
+        <!-- Task List -->
+        <section>
+            <ul id="taskList"></ul>
+
+            <p id="emptyMessage" class="empty">
+                No tasks found.
+            </p>
+        </section>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
